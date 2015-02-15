@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="autocomplete.css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="autocomplete.js"></script>
+	</head>
+	<body>
+		<div id="search"></div>
+		<p>Some Text</p>
+		<script>
+		var list = [
+			'Человек',
+			'Че Гевара',
+			'Яблоко',
+			'Ноутбук',
+			'Но Пасаран!'
+		];
+
+		var autocomplete = new Autocomplete({
+			elem: $('#search'),
+			data: list
+		});
+		</script>
+	</body>
+</html>
