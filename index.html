@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="search"></div>
-		<p>Some Text</p>
+		<p id="onchange">Some Text</p>
 		<script>
 		var list = [
 			'Человек',
@@ -21,6 +21,10 @@
 		var autocomplete = new Autocomplete({
 			elem: $('#search'),
 			data: list
+		});
+
+		$(autocomplete).on("change", function(e) {
+			$("#onchange").html(e.value);
 		});
 		</script>
 	</body>
